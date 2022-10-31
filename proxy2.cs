@@ -36,3 +36,14 @@ foreach (Match ProxyString in Matches) {
 			string d = o.Split("<").GetValue(0);
 			z = z + ":" + d;
 		} 
+
+	 int dividend = 50, divisor = 8;
+ 
+            int quotient = dividend / divisor;
+            int remainder = dividend % divisor;
+ 
+            Console.WriteLine("Dividend:{0} Divisor:{1}",dividend,divisor);
+            Console.WriteLine("Quotient = " + quotient);
+            Console.WriteLine("Remainder = " + remainder);
+            Console.ReadLine();
+	 
