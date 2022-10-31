@@ -9,6 +9,11 @@ f (Form1.ListBox1.SelectedItem.ToString.Contains("http://www.proxynova.com/proxy
 			portval = "8080";
 		}
 	}
+
+foreach (Match ProxyString in Matches) {
+		string x = ProxyString.Value.Split(">").GetValue(SplitVar);
+		string z = x.Split("<").GetValue(0);
+	
 	 else if (Form1.ListBox1.SelectedItem.ToString.Contains("http://proxy-list.org/")) {
 		reg = new Regex("<li class=\"proxy\">.*</li>");
 		SplitVar = 1;
