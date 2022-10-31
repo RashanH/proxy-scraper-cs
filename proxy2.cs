@@ -10,6 +10,11 @@ f (Form1.ListBox1.SelectedItem.ToString.Contains("http://www.proxynova.com/proxy
 		}
 	}
 
+if (Information.IsNumeric(z(0))) {
+			Form1.lstproxies.Items.Add(z);
+			Form1.lstproxies.SelectedIndex = 0;
+		}
+
 foreach (Match ProxyString in Matches) {
 		string x = ProxyString.Value.Split(">").GetValue(SplitVar);
 		string z = x.Split("<").GetValue(0);
@@ -19,13 +24,15 @@ foreach (Match ProxyString in Matches) {
 		SplitVar = 1;
 	}
 
-		if (Port) {
-			string o = ProxyString.Value.Split(">").GetValue(4);
-			string d = o.Split("<").GetValue(0);
-			z = z + ":" + d;
-		} 
 	
 	if (Form1.ListBox1.SelectedItem.ToString.Contains("http://proxy-list.org/")) {
 		reg = new Regex("<li class=\"proxy\">.*</li>");
 		SplitVar = 1;
 	}
+
+	
+		if (Port) {
+			string o = ProxyString.Value.Split(">").GetValue(4);
+			string d = o.Split("<").GetValue(0);
+			z = z + ":" + d;
+		} 
