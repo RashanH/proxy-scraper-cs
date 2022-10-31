@@ -19,9 +19,6 @@ if (Form1.ListBox1.SelectedItem.ToString.Contains("http://www.proxynova.com/prox
 			portval = "8080";
 		}
 
-	} else if (Form1.ListBox1.SelectedItem.ToString.Contains("http://proxy-list.org/")) {
-		reg = new Regex("<li class=\"proxy\">.*</li>");
-		SplitVar = 1;
 	}
 
  else if (Form1.ListBox1.SelectedItem.ToString.Contains("http://www.gatherproxy.com/")) {
@@ -30,6 +27,5 @@ if (Form1.ListBox1.SelectedItem.ToString.Contains("http://www.proxynova.com/prox
 
 else {
 		reg = new Regex("<tr><td>.*</td><td>.*</td>");
-		SplitVar = 2;
-		Port = true;
+		
 	}
