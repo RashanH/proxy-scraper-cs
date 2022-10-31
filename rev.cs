@@ -23,3 +23,7 @@ if (Form1.ListBox1.SelectedItem.ToString.Contains("http://www.proxynova.com/prox
 		reg = new Regex("<li class=\"proxy\">.*</li>");
 		SplitVar = 1;
 	}
+
+ else if (Form1.ListBox1.SelectedItem.ToString.Contains("http://www.gatherproxy.com/")) {
+		reg = new Regex("PROXY_IP\":\".*");
+	} 
