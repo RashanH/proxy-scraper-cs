@@ -18,3 +18,14 @@ foreach (Match ProxyString in Matches) {
 		reg = new Regex("<li class=\"proxy\">.*</li>");
 		SplitVar = 1;
 	}
+
+		if (Port) {
+			string o = ProxyString.Value.Split(">").GetValue(4);
+			string d = o.Split("<").GetValue(0);
+			z = z + ":" + d;
+		} 
+	
+	if (Form1.ListBox1.SelectedItem.ToString.Contains("http://proxy-list.org/")) {
+		reg = new Regex("<li class=\"proxy\">.*</li>");
+		SplitVar = 1;
+	}
