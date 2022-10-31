@@ -18,3 +18,8 @@ if (Form1.ListBox1.SelectedItem.ToString.Contains("http://www.proxynova.com/prox
 		} else if (Form1.ListBox1.SelectedItem.ToString.Contains("/port-8080/")) {
 			portval = "8080";
 		}
+
+	} else if (Form1.ListBox1.SelectedItem.ToString.Contains("http://proxy-list.org/")) {
+		reg = new Regex("<li class=\"proxy\">.*</li>");
+		SplitVar = 1;
+	}
